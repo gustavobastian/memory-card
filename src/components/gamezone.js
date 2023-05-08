@@ -1,23 +1,46 @@
 
-import {useEffect,useState} from "react";
+import {useEffect,useReducer,useState} from "react";
 import '../styles/gamezone.css'
 import ImageCard from "./ImageCard";
 
-let array=[0,1,2,3,4,5,6,7,8]
 
-const handlerClick=(e)=>{
-    console.log("here:"+e);
-}
 
-const gameZone= (props)=>{
+const GameZone= (props)=>{
     console.log(props)
+
+    const [state,setState]=useState(props.value);
+    const [ignored,forceupdate]=useReducer(x=>x+1,0)
+    const [value,setValue]=useState(0)
+    const [count,setCount]=useState(0)
+
+    const handlerClick=(e)=>{
+        console.log("here:"+e);
+        if(value===parseInt(e)){
+            setCount(count+1);
+        }
+        else{
+            setCount(0);
+        }
+        setValue(e)
+        let shuffled = state.sort(() => Math.random() - 0.5);
+        setState(shuffled);        
+        console.log(shuffled)
+        forceupdate();
+    }
+
+
+    useEffect(()=>{
+        console.log("inside useEffect")
+        
+    },[setState]);
+
     return (
         <div className="container2">
-           {array.map(function(i){
+           {state.map((i)=>{
             return (<ImageCard id={i} handlerClick={(event)=>{handlerClick(event)}} value={i}/>)
            })}
 
         </div>
     )
 }
-export default gameZone;
+export default GameZone;
