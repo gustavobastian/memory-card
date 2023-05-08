@@ -1,13 +1,13 @@
 
 .imageHolder{
     border-radius: 15px;
-    width: 350px;
-    height: 300px;
+    width: auto;
+    height:300px;
     background: black;
     color: white;
     font-weight: bold;
     text-align: center;
-    margin-top: 5px;
+    margin: 5px;
 }
 img{
     width: auto;
