@@ -11,9 +11,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: rgb(175, 252, 252);
+    background: linear-gradient(rgb(226, 156, 24),rgb(177, 177, 250),orange);
     width: 20%;
-    height: 50px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: bold;
 
 }
 .leftHeader{
@@ -21,8 +23,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: rgb(153, 108, 153);
+    background:linear-gradient(rgb(226, 156, 24),rgb(178, 178, 236),orange);
     width: 80%;
-    height: 50px;
-
+    height: 60px;
+    font-size: 25px;
+    font-weight: bold;
 }

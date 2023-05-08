@@ -1,9 +1,13 @@
 
 .container2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
+    text-align: center;
+    height: 110vh;
     background: linear-gradient(orange,rgb(89, 89, 247));
+    padding-bottom: 20px;    
+    padding-left: 20%;    
 }
