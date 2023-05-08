@@ -1,0 +1,28 @@
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+.rightHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(175, 252, 252);
+    width: 20%;
+    height: 50px;
+
+}
+.leftHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgb(153, 108, 153);
+    width: 80%;
+    height: 50px;
+
+}
