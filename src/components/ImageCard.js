@@ -4,14 +4,12 @@ import '../styles/imageCard.css'
 
 const names=["Sun","Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune","Pluto"]
 
-const ImageCard= (props)=>{
-   // console.log(props)
+const ImageCard= (props)=>{   
     
     let value=parseInt(props.value);
     
-    const handlerClick=(i)=>{
-        console.log(i)
-        console.log("here inside");
+    const handlerClick=(i)=>{        
+        
         props.handlerClick(i)
     }
 

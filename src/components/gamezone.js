@@ -6,32 +6,35 @@ import ImageCard from "./ImageCard";
 
 
 const GameZone= (props)=>{
-    console.log(props)
+    //console.log(props)
 
     const [state,setState]=useState(props.value);
     const [ignored,forceupdate]=useReducer(x=>x+1,0)
     const [value,setValue]=useState(0)
     const [count,setCount]=useState(props.rating)
 
-    const handlerClick=(e)=>{
-        console.log("here:"+e);
-        if(value===parseInt(e)){
+    const handlerClick=(e)=>{       
+       /* if(value===parseInt(e)){
             setCount(count+1);
+            props.setRate();
         }
         else{
             setCount(0);
-        }
+            props.resetRate();
+        }*/
+        setCount(count+1);
+        props.setRate();
+
         setValue(e)
         let shuffled = state.sort(() => Math.random() - 0.5);
-        setState(shuffled);        
-        console.log(shuffled)
+        setState(shuffled);                
         forceupdate();
+        
     }
 
 
     useEffect(()=>{
-        console.log("inside useEffect")
-        
+        console.log("inside useEffect");        
     },[setState]);
 
     return (
