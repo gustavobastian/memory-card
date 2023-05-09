@@ -18,6 +18,7 @@ const MyHeader= (props)=>{
             <div className="leftHeader">
                 <h1>Memory Card Game: </h1>                
                 <p> (if you repeat the card, you loose)</p>
+                <p>Pictures(Nasa via Wikimedia commons)</p>
             </div>
             <div className="rightHeader">
                 <div className="currentScore">CurrentScore:{props.rating}</div>
