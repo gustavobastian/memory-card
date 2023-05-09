@@ -11,7 +11,7 @@ const GameZone= (props)=>{
     const [state,setState]=useState(props.value);
     const [ignored,forceupdate]=useReducer(x=>x+1,0)
     const [value,setValue]=useState(0)
-    const [count,setCount]=useState(0)
+    const [count,setCount]=useState(props.rating)
 
     const handlerClick=(e)=>{
         console.log("here:"+e);
