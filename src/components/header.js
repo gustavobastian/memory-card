@@ -16,12 +16,16 @@ const MyHeader= (props)=>{
     return (
         <div className="container">
             <div className="leftHeader">
-                <h1>Memory Card Game: </h1>                
-                <p> (if you repeat the card, you loose)</p>
-                <p>Pictures(Nasa via Wikimedia commons)</p>
+                <div>
+                    <h1>Memory Card Game: </h1>                
+                </div>
+                <div>
+                    <p className="pInside"> (if you repeat the card, you loose)</p>
+                    <p className="pInside">Pictures(Nasa via Wikimedia commons)</p>
+                </div>
             </div>
             <div className="rightHeader">
-                <div className="currentScore">CurrentScore:{props.rating}</div>
+                <div className="currentScore">CurrentScore: {props.rating}</div>
                 <div className="maxScore">MaxScore: {props.maxScore}</div>
             </div>
         </div>
